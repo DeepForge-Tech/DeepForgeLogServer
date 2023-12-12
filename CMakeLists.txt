@@ -37,19 +37,16 @@ if (WIN32)
     ws2_32
     SQLite
     winmm
-    pthread
   )
 elseif(APPLE)
   set(LIBRARIES
     jsoncpp_static
     SQLite
-    pthread
   )
 elseif(UNIX)
   set(LIBRARIES
     jsoncpp_static
-    SQLite
-    pthread
+    SQLites
   )
 endif()
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_CXX_FLAGS}-DCURL_STATICLIB -static-libgcc -static-libstdc++ -Bstatic")
