@@ -1,3 +1,0 @@
-/mnt/d/DeepForge/LogServer/DeepForgeLogServer/build/_deps/jsoncpp-subbuild/CMakeFiles/jsoncpp-populate.dir
-/mnt/d/DeepForge/LogServer/DeepForgeLogServer/build/_deps/jsoncpp-subbuild/CMakeFiles/edit_cache.dir
-/mnt/d/DeepForge/LogServer/DeepForgeLogServer/build/_deps/jsoncpp-subbuild/CMakeFiles/rebuild_cache.dir
