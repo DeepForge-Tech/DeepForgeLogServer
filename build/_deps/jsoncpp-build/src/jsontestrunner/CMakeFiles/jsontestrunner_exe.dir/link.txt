@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/jsontestrunner_exe.dir/main.cpp.o -o jsontestrunner_exe   -L/mnt/d/DeepForge/LogServer/DeepForgeLogServer/src/lib  -Wl,-rpath,/mnt/d/DeepForge/LogServer/DeepForgeLogServer/src/lib ../lib_json/libjsoncpp.a 

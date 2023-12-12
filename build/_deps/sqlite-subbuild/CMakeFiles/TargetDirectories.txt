@@ -1,0 +1,3 @@
+/mnt/d/DeepForge/LogServer/DeepForgeLogServer/build/_deps/sqlite-subbuild/CMakeFiles/sqlite-populate.dir
+/mnt/d/DeepForge/LogServer/DeepForgeLogServer/build/_deps/sqlite-subbuild/CMakeFiles/edit_cache.dir
+/mnt/d/DeepForge/LogServer/DeepForgeLogServer/build/_deps/sqlite-subbuild/CMakeFiles/rebuild_cache.dir
