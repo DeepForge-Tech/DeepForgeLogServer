@@ -12,6 +12,8 @@ cd build
 sudo cmake ..
 sudo make -j4
 sudo make install
+# or
+sudo bash ./BuildProject.sh
 ```
 
 </details>
@@ -44,6 +46,8 @@ cd build
 sudo cmake ..
 sudo make -j4
 sudo make install
+# or
+sudo bash ./BuildProject.sh
 ```
 
 </details>
