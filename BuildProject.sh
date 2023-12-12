@@ -147,8 +147,6 @@ esac
 echo "==> Building"
 mkdir build
 cd build
-mkdir $os
-cd ..
 echo "==> Building client"
 case "${unameOut}" in
 	Darwin*) 	sudo clang++ -o ./build/Client ./src/Client/Client.cpp  -I ../../include  -L ../../lib/ -I ./src/include -L ./src/lib -ljsoncpp -std=c++2a -Bstaticc;;
