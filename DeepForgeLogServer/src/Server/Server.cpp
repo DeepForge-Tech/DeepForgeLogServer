@@ -129,8 +129,8 @@ void Server::Start()
 // Driver code
 int main(int argc, char* argv[])
 {
-    if (argc == 2) {
-        Server server(argv[1]);
+    if (argc > 1) {
+        Server server(atoi(argv[1]));
         server.Start();
     }
     return 0;

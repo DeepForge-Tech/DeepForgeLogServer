@@ -11,8 +11,9 @@
 #include "json/value.h"
 #include "json/reader.h"
 #include "DatabaseConnect.hpp"
+#include <cstdlib>
+#include <fstream>
 
-#define PORT 746
 #define MAX_SIZE 16384
 
 using namespace std;
@@ -28,11 +29,12 @@ namespace LogServer
     /* `socklen_t len;` is declaring a variable `len` of type `socklen_t`. */
     socklen_t len;
     int n;
-    const char* SUCCESS = "Information added successfully";
+    const char *SUCCESS = "Information added successfully";
     string ProjectDir = std::filesystem::current_path().generic_string();
     Database database;
     string DatabasePath = ProjectDir + "/DB/Logs.db";
-    string IP_ADDRESS;
+    const string IP_ADDRESS = "64.226.99.105";
+    int PORT;
 
     class Server
     {
@@ -42,13 +44,30 @@ namespace LogServer
         void SetInformation();
         void BindSocket();
         void Start();
-        Server(string ip_address)
+        Server(int port)
         {
-            IP_ADDRESS = ip_address;
+            PORT = port;
+            CheckDB();
             database.open(&DatabasePath);
             cout << "Server started on " << IP_ADDRESS << ":" << PORT << endl;
         }
         // ~Server();
     private:
+        void CheckDB()
+        {
+            filesystem::path DB_DIR(DatabasePath);
+            DB_DIR = DB_DIR.parent_path().string();
+            if (filesystem::exists(DB_DIR) == false)
+            {
+                filesystem::create_directory(DB_DIR);
+            }
+            /* The bellow code is checking if a file exists at the specified path. If the file does not exist, it creates a new file and writes an empty string to it. Then, it opens a database connection using the file as the database path. It checks if a table named "Applications" exists in the database. If the table does not exist, it creates the table with the specified columns. Finally, it inserts values into the "Applications" table. */
+            if (filesystem::exists(DatabasePath) == false)
+            {
+                ofstream file(DatabasePath);
+                file << "";
+                file.close();
+            }
+        }
     };
 }
