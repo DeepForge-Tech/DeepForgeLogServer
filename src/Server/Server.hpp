@@ -10,7 +10,7 @@
 #include "json/json.h"
 #include "json/value.h"
 #include "json/reader.h"
-#include "DatabaseConnect.cpp"
+#include "DatabaseConnect.hpp"
 #include <cstdlib>
 #include <fstream>
 

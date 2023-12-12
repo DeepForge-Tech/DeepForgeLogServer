@@ -46,7 +46,7 @@ elseif(APPLE)
 elseif(UNIX)
   set(LIBRARIES
     jsoncpp_static
-    SQLites
+    SQLite
   )
 endif()
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_CXX_FLAGS}-DCURL_STATICLIB -static-libgcc -static-libstdc++ -Bstatic")
