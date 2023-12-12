@@ -1,2 +1,0 @@
-/usr/bin/ar qc libSQLite.a CMakeFiles/SQLite.dir/src/shell.c.o CMakeFiles/SQLite.dir/src/sqlite3.c.o
-/usr/bin/ranlib libSQLite.a
