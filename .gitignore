@@ -30,8 +30,5 @@
 *.exe
 *.out
 *.app
-MainLogServer/
-InstallerLogServer/build/
-DeepForge-Toolset-LogServer/build/
-UpdateManager-LogServer/build/
-UninstallerLogServer/build/
+build/
+/build/
