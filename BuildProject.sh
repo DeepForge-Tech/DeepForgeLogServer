@@ -144,9 +144,6 @@ case "${unameOut}" in
 	Linux*)		os="Linux";;
 esac
 # Building
-echo "==> Building"
-mkdir build
-cd build
 echo "==> Building client"
 case "${unameOut}" in
 	Darwin*) 	sudo clang++ -o ./build/Client ./src/Client/Client.cpp  -I ../../include  -L ../../lib/ -I ./src/include -L ./src/lib -ljsoncpp -std=c++2a -Bstaticc;;
