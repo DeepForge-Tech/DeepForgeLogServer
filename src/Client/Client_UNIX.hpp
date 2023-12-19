@@ -67,7 +67,7 @@ namespace UNIX
         {
             if (filesystem::exists(path) == true)
             {
-                ostream file(path.c_str(),ios::binary ios::out);
+                ostream file(path.c_str(),ios::binary);
                 file << "";
                 file.close()
             }
