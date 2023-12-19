@@ -75,7 +75,8 @@
 			"typeinfo": "cpp",
 			"variant": "cpp",
 			"regex": "cpp",
-			"bitset": "cpp"
+			"bitset": "cpp",
+			"xlocmes": "cpp"
 		}
 	}
 }
