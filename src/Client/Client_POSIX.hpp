@@ -66,7 +66,7 @@ namespace POSIX
             {
                 fstream file(path.c_str(),ios::binary);
                 file << "";
-                file.close()
+                file.close();
             }
             /* This code is responsible for reading the contents of a file specified by the `path` variable and storing it in the `data` array. */
             FILE *fp;
