@@ -64,7 +64,7 @@ namespace POSIX
         {
             if (filesystem::exists(path) == true)
             {
-                ostream file(path,ios::binary);
+                fstream file(path.c_str(),ios::binary);
                 file << "";
                 file.close()
             }
