@@ -2,6 +2,8 @@
 #include <iostream>
 #include <winsock2.h>
 #include <fstream>
+#include <filesystem>
+
 using namespace std;
 
 #pragma comment(lib, "ws2_32.lib")
@@ -60,6 +62,12 @@ namespace POSIX
         }
         void SEND_JSON_FILE(string path)
         {
+            if (filesystem::exists(path) == true)
+            {
+                fstream file(path.c_str(),ios::binary);
+                file << "";
+                file.close();
+            }
             /* This code is responsible for reading the contents of a file specified by the `path` variable and storing it in the `data` array. */
             FILE *fp;
             char data[BUFFER_MAX_LENGHT];

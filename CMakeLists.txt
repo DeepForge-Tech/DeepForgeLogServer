@@ -16,14 +16,11 @@ FetchContent_Declare(jsoncpp
 FetchContent_MakeAvailable(jsoncpp)
 
 # SQLite 3
-# FetchContent_Declare(SQLite
-#   GIT_REPOSITORY https://github.com/DeepForge-Technology/SQLite.git
-#   GIT_TAG master
-# )
-# FetchContent_MakeAvailable(SQLite)
-find_package (SQLite3)
-
-include_directories(${SQLite3_INCLUDE_DIRS})
+FetchContent_Declare(SQLite
+  GIT_REPOSITORY https://github.com/DeepForge-Technology/SQLite.git
+  GIT_TAG master
+)
+FetchContent_MakeAvailable(SQLite)
 
 include_directories("./src/include")
 set(SOURCE_FILES
@@ -38,21 +35,18 @@ if (WIN32)
     urlmon
     jsoncpp_static
     ws2_32
-    # SQLite
-    ${SQLite3_LIBRARIES}
+    SQLite
     winmm
   )
 elseif(APPLE)
   set(LIBRARIES
     jsoncpp_static
-    # SQLite
-    ${SQLite3_LIBRARIES}
+    SQLite
   )
 elseif(UNIX)
   set(LIBRARIES
     jsoncpp_static
-    # SQLite
-    ${SQLite3_LIBRARIES}
+    SQLite
   )
 endif()
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_CXX_FLAGS}-DCURL_STATICLIB -static-libgcc -static-libstdc++ -Bstatic")

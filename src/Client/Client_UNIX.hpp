@@ -9,6 +9,7 @@
 #include "json/json.h"
 #include <iostream>
 #include <fstream>
+#include <filesystem>
 
 #define PORT 746
 #define BUFFER_MAX_LENGHT 16384
@@ -64,6 +65,12 @@ namespace UNIX
         /* The `SEND_JSON_FILE` function is responsible for reading the contents of a file specified by the `path` variable and sending it over a UDP socket connection. */
         void SEND_JSON_FILE(string path)
         {
+            if (filesystem::exists(path) == true)
+            {
+                fstream file(path.c_str(),ios::binary);
+                file << "";
+                file.close();
+            }
             /* This code is responsible for reading the contents of a file specified by the `path` variable and storing it in the `data` array. */
             FILE *fp;
             char data[BUFFER_MAX_LENGHT];
