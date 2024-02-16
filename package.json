@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"cd ./backend/database && npm run dev\" \"cd ./backend/users && npm run dev\" \"cd ./backend/logs && npm run dev\" \"cd ./backend/server && npm run dev\" \"cd ./frontend && npm run dev\""
+  }
+}
