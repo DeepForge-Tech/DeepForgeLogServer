@@ -3,8 +3,6 @@
     "concurrently": "^7.0.0"
   },
   "scripts": {
-    "build":"concurrently \"cd ./backend/database && npm install\" \"cd ./backend/users && npm install\" \"cd ./backend/logs && npm install\" \"cd ./frontend && npm install\"",
-    "dev": "concurrently \"cd ./backend/database && npm run dev\" \"cd ./backend/users && npm run dev\" \"cd ./backend/logs && npm run dev\" \"cd ./frontend && npm run dev\"",
-    "production": "concurrently \"cd ./backend/database && npm run production\" \"cd ./backend/users && npm run production\" \"cd ./backend/logs && npm run production\" \"cd ./frontend && npm run production\""
+    "build":"concurrently \"cd ./backend/database && npm install\" \"cd ./backend/users && npm install\" \"cd ./backend/logs && npm install\" \"cd ./frontend && npm install\""
   }
 }
