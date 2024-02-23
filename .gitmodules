@@ -4,15 +4,9 @@
 [submodule "backend/database"]
 	path = backend/database
 	url = https://github.com/DeepForge-Technology/DeepForgeLogServer-database.git
-[submodule "backend/server"]
-	path = backend/server
-	url = https://github.com/DeepForge-Technologies/DeepForgeLogServer-server.git
 [submodule "backend/users"]
 	path = backend/users
 	url = https://github.com/DeepForge-Technology/DeepForgeLogServer-users.git
 [submodule "backend/logs"]
 	path = backend/logs
 	url = https://github.com/DeepForge-Technology/DeepForgeLogServer-logs.git
-[submodule "backend/dashboard"]
-	path = backend/dashboard
-	url = https://github.com/DeepForge-Technology/DeepForgeLogServer-dashboard.git
