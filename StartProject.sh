@@ -2,4 +2,4 @@
 cd ./backend/users && nohup npm run dev < /dev/null &
 cd ./backend/logs && nohup npm run dev < /dev/null &
 cd ./backend/database && nohup npm run dev < /dev/null &
-cd ./frontend/ && npm run dev
+cd ./frontend/gateway && npm run production
